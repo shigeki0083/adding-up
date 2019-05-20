@@ -89,7 +89,7 @@ rl.on('close', ()=>
             {
                 // 戻り値が負数：最初の要素を先頭に持っていく
                 // 戻り値が整数：2番めの要素を先頭に持っていく
-                return pair2[1].change - pair1[1].change;
+                return pair1[1].change - pair2[1].change;
             });
 
     // ここで使うmap()は連想配列のMapではなく、写像のこと。
