@@ -94,9 +94,9 @@ rl.on('close', ()=>
 
     // ここで使うmap()は連想配列のMapではなく、写像のこと。
     // C#でいう、LINQのSlect()に相当する。
-    const rankingStrings = rankingArray.map((pair) =>
+    const rankingStrings = rankingArray.map((pair, i) =>
     {
-        return pair[0] + ': ' + pair[1].popu10 + '=>' + pair[1].popu15 + ' 変化率：' + pair[1].change;
+        return (i+1) + '位： ' + pair[0] + ': ' + pair[1].popu10 + '=>' + pair[1].popu15 + ' 変化率：' + pair[1].change;
     });
 
     console.log(rankingStrings);
